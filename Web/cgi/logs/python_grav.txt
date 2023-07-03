@@ -1,0 +1,2 @@
+{"KNN": {"acc_score": 0.4832, "pred": "Blesse leger"}, "SVM": {"acc_score": 0.4364, "pred": "Blesse leger"}, "random_forest": {"acc_score": 0.9475970526778841, "pred": "Blesse leger"}, "MLP": {"acc_score": 0.5341838043916566, "pred": "Indemne"}}
+e": 0.4806, "pred": "Blesse leger"}, "SVM": {"acc_score": 0.434, "pred": "Blesse leger"}, "random_forest": {"acc_score": 0.9475970526778841, "pred": "Blesse leger"}, "MLP": {"acc_score": 0.5339821840976575, "pred": "Blesse leger"}}

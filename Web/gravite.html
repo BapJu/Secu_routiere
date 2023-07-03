@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="grp4-T7_JB_DM_LB">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+    <script src="js/utils.js"></script>
+    <script src="js/grav.js" defer></script>
+
+    <!-- Title -->
+    <title>ISEN Accident</title>
+  </head>
+  <body onload="start_predic()">
+    <!-- Header -->
+    <header>
+      <h1>ISEN Accident</h1>
+      <nav>
+        <a href="https://http://etu414.projets.isen-ouest.fr/" target="_blank"> <img src="img/logo.jpg"> </a>
+        <ul class="menu">
+          <li class = "not_active"><a href="index.html">Accueil</a></li>
+          <li class="not_active"><a href="visualisation.html">visualisation</a>
+            <ul role="menu" class="dropdown-menu">
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#tableau-titre">Tableau</a></li>
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#map-title">Carte</a></li>
+            </ul>
+            </li>
+          <li class = "not_active"><a href="add_crash.html">Ajouter un accident</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section>
+      <!-- Added title "Données d'accident de la circulation routière" -->
+      <h2 class="map-title">Résultat de la prédiction !</h2>
+      <!-- Description of the project -->
+      <p>
+        <div id="loading-screen">
+            <img src="img/load.gif" alt="Chargement en cours...">
+        </div>
+        <div id="resultatDiv">
+        </div>
+        </p>
+  </section>
+    <footer>
+        <hr>
+        &copy; ISEN Accident - grp4-T7_JB_DM_LB
+        <br>
+        <a href="https://www.isen.fr/" target="_blank">ISEN Yncréa Ouest</a>
+      </footer>
+    </body>

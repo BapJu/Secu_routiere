@@ -1,0 +1,258 @@
+header {
+    background-color: #333 !important;  /*  couleur de fond du header */
+    color: white;           
+    padding: 20px;
+    width:100%;         /* Faire en sorte que le header prenne toute la largeur de la page */
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+/* Styles pour les h1 à l'intérieur du header */
+header h1 {          /* Supprimer les marges autour des h1 */
+    margin: 0;
+}
+/* Styles pour les images à l'intérieur du header */
+header img {
+    width: 20%; 
+}
+
+.title {                       /* Styles pour le titre */
+    text-align: center;
+    font-size: 24px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.menu {
+    /* Cela permet aux éléments de la liste de se disposer sur une ligne */
+    display: flex;
+    /* Cela répartit les éléments de manière uniforme sur toute la largeur du conteneur */
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    /* Cela étend chaque élément de liste pour qu'il occupe une part égale de l'espace */
+    flex: 1;
+    /* Cela centre le texte à l'intérieur de chaque élément de liste */
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.active a {
+    color: #e67e22;
+    text-decoration: none;
+
+}
+
+.not_active a {             
+    color: white;
+    text-decoration: none;
+}
+
+.not_active a:hover{
+    color: #e67e22;
+
+}
+
+.dropdown-menu {            /* Styles pour le menu déroulant */
+display: none;
+background-color: #f9f9f9;
+min-width: 160px;
+z-index: 1;
+margin-right: 0;
+}
+
+.dropdown-menu li {       /* Styles pour les éléments de liste dans le menu déroulant */
+    display: block; 
+    text-align: center; 
+}
+
+li:hover .dropdown-menu {
+    display: block;
+    position: relative;
+  }
+
+body {
+    font-family: 'Marko One', serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0 ;
+    padding: 0;
+}
+
+.item:hover{
+    color: #e67e22!important;
+} 
+
+.item { 
+    color:#333 !important;
+}
+
+
+section {
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input_formulaire {
+    width: 10% !important;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #cccccc;
+}
+
+.boutton-envoyer {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    width: auto !important; /* ajuste la largeur du bouton en fonction de son contenu */
+    font-size: 1.2em;
+    border-radius: 25px !important; /* arrondit les coins du bouton */
+    transition: background-color 0.3s ease; /* ajoute une animation lors de l'interaction avec le bouton */
+    text-transform: uppercase; /* transforme le texte en majuscules */
+    display: block; /* rend le bouton d'envoi un bloc pour qu'il apparaisse sur sa propre ligne */
+
+}
+
+.boutton-envoyer:hover {
+    background-color: #d35400;
+    box-shadow: 0 5px #666; /* Réduit la taille de l'ombre lors du survol */
+    transform: translateY(4px); /* Déplace légèrement le bouton vers le bas */
+}
+
+.boutton-envoyer:active {
+    background-color: #a04000;
+    box-shadow: 0 5px #666; 
+    transform: translateY(4px); 
+}
+
+
+.submit-crash label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+th, td {
+    border: 0.1rem solid;
+    text-align: center;
+    padding : 13px;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.cluster-button {
+    background-color: orangered; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px; /* Ajoute des coins arrondis */
+    box-shadow: 0 9px #999; /* Ajoute une ombre */
+}
+    
+.cluster-button:hover {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px); 
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    background-image: 
+        linear-gradient(white, white),
+        radial-gradient(circle at top left, orangered, beige, black, orange);
+    background-origin: border-box;
+    background-clip: content-box, border-box; 
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+   
+.formulaire-row {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.input-pair {
+    flex-basis: 20%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-pair label {
+    flex-basis: 50%;
+}
+
+.input-pair input,
+.input-pair select {
+    flex-basis: 70%; 
+    margin-right: 10px;
+
+}
+
+.small-image {
+    display: block;
+    margin: auto;
+    width: 50%;   
+    height: auto; 
+}
+    
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

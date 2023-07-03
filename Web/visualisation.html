@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="grp4-T7_JB_DM_LB">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+
+
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+    <!-- JS Script -->
+    <script src="js/utils.js"></script>
+    <script src="js/visualisation.js" defer></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+    
+
+    <!-- Title -->
+    <title>ISEN Accident</title>
+  </head>
+  <body onload="get_accidents()">
+    <!-- Header -->
+    <header>
+      <h1>ISEN Accident</h1>
+      <nav>
+        <a href="https://http://etu414.projets.isen-ouest.fr/" target="_blank"> <img src="img/logo.jpg"> </a>
+        <ul class="menu">
+          <li class = "not_active"><a href="index.html">Accueil</a></li>
+          <li class="active"><a href="visualisation.html">visualisation</a>
+            <ul role="menu" class="dropdown-menu">
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#tableau-titre">Tableau</a></li>
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#map-title">Carte</a></li>
+            </ul>
+            </li>
+          <li class = "not_active"><a href="add_crash.html">Ajouter un accident</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h3 id="tableau-titre" class="title">Base de données des accidents</h3>
+      <br><br>
+      <label for="select-menu">Nombre d'accidents à afficher :</label>
+      <select id="max_show">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="all">Tous</option>
+      </select>
+      <br><br>
+      <table id="tableau">
+        <thead>
+          <tr>
+            <th>Selection</th>
+            <th>ID</th>
+            <th>Age Conducteur</th>
+            <th>Date</th>
+            <th>Ville</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Etat Surface</th>
+            <th>Description Atmosphérique</th>
+            <th>Description Dispo Sécurité</th>
+            <th>Description Luminosité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+      
+      <br><br><br>
+      <button type="button" class="cluster-button" id="predict-button">Prédire la gravité</button>
+      <br><br><br>
+      <div class="map-container">
+        <h2 id="map-title" class="title">Carte des accidents</h2>
+        <input type="checkbox" id="onlyFrance" name="onlyFrance">
+        <label for="onlyFrance">Afficher uniquement les accidents en France</label><br><br>
+        <label for="dateDebut">Date de début :</label>
+        <input type="date" id="dateDebut">
+
+        <label for="dateFin">Date de fin :</label>
+        <input type="date" id="dateFin">
+
+        <button type="button" class="cluster-button" id="filter-button">Filtrer</button>
+
+        <br><br>
+        <div id="map"></div>
+    </div>
+      
+        <br><br><br><br><br>
+        <script src="js/maps.js"></script>
+        <br><br><br><br>
+        <button type="button" class="cluster-button" onclick="window.location.href = 'predict.html'">Prédire les clusters</button>
+
+        <br><br>
+    </section>
+    <footer>
+        <hr>
+        &copy; ISEN Accident - grp4-T7_JB_DM_LB
+        <br>
+        <a href="https://www.isen.fr/" target="_blank">ISEN Yncréa Ouest</a>
+      </footer>
+    </body>
+
+    

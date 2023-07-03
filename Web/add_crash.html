@@ -1,0 +1,129 @@
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="grp4-T7_JB_DM_LB">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+
+    <!-- JS Script -->
+    <script src="js/utils.js"></script>
+    <script src="js/add_crash.js" defer></script>
+
+    <!-- Title -->
+    <title>ISEN Accident</title>
+  </head>
+  <body onload="getOptions()">
+    <!-- Header -->
+    <header>
+      <h1>ISEN Accident</h1>
+      <nav>
+        <a href="https://http://etu414.projets.isen-ouest.fr/" target="_blank"> <img src="img/logo.jpg"> </a>
+        <ul class="menu">
+          <li class = "not_active"><a href="index.html">Accueil</a></li>
+          <li class="not_active"><a href="visualisation.html">visualisation</a>
+            <ul role="menu" class="dropdown-menu">
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#tableau-titre">Tableau</a></li>
+              <li class="dropdown-item"><a class = "item" href="visualisation.html#map-title">Carte</a></li>
+            </ul>
+            </li>
+          <li class = "active"><a href="add_crash.html">Ajouter un accident</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section>
+      <h2 class="title">Ajouter votre accident à notre base de donnée !</h2>       
+    
+      <form id="submit-crash" method="post" class="formulaire">
+        <div class="formulaire-row">
+            <div class="input-pair">
+                <label for="age">Age :</label>
+                <input class="input_formulaire" type="number" id="age" name="age" min="0" required>
+              </div>
+            <div class="input-pair">
+                <label for="date_heure">Date :</label>
+                <input class="input_formulaire" type="datetime-local" id="date_heure" name="date_heure" required>
+            </div>
+        </div>
+    
+        <div class="formulaire-row">
+            <div class="input-pair">
+                <label for="longitude">Longitude :</label>
+                <input class="input_formulaire" type="text" id="longitude" pattern="-?\d+(\.\d+)?" title="Veuillez saisir une valeur décimale valide" required>
+            </div>
+            <div class="input-pair">
+                <label for="latitude">Latitude :</label>
+                <input class="input_formulaire" type="text" id="latitude" min="-180" max="180" name="latitude" required>
+            </div>
+        </div>
+    
+        <div class="formulaire-row">
+            <div class="input-pair">
+                <label for="ville">Ville :</label>
+                <input class="input_formulaire" type="text" id="ville" name="ville" required>
+            </div>
+            <div class="input-pair">
+                <label for="descr_atmo">Conditions atmosphériques :</label>
+                <select class="input_formulaire" id="descr_atmo" name="descr_atmo[]">
+                    <option value="option1">Option 1</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="formulaire-row">
+            <div class="input-pair">
+                <label for="descr_dispo_secu">Dispositions de sécurité :</label>
+                <select class="input_formulaire" id="descr_dispo_secu" name="descr_dispo_secu[]">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+            <div class="input-pair">
+                <label for="descr_lum">Luminosité de la scène :</label>
+                <select class="input_formulaire" id="descr_lum" name="descr_lum[]">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+            </div>
+        </div>
+    
+        <div class="formulaire-row">
+            <div class="input-pair">
+                <label for="descr_etat_surf">Etat de la route :</label>
+                <select class="input_formulaire" id="descr_etat_surf" name="descr_etat_surf[]">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+                <input class="boutton-envoyer" type="submit" value="Envoyer">        
+            </div>
+        </div>
+
+    </form>
+    </section>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+      <hr>
+      &copy; ISEN Accident - grp4-T7_JB_DM_LB
+      <br>
+      <a href="https://www.isen.fr/" target="_blank">ISEN Yncréa Ouest</a>
+    </footer>
+  </body>
+</html>
+<form class="footer-form" action="visualisation.html" method="post" >
+  ...
+  </form>
+
